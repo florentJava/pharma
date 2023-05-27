@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane cache="true" cacheHint="SPEED" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+   <left>
+      <HBox maxWidth="300.0" minHeight="0.0" minWidth="0.0" prefHeight="401.0" prefWidth="217.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="337.0" prefWidth="10.0" style="-fx-background-color: GRAY;">
+               <effect>
+                  <Lighting bumpInput="$null">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </VBox>
+            <VBox maxWidth="200.0" minHeight="50.0" minWidth="50.0" prefHeight="401.0" prefWidth="186.0" style="-fx-background-color: F5FFFF;" HBox.hgrow="ALWAYS">
+               <children>
+                  <JFXButton fx:id="vente" alignment="BASELINE_LEFT" onAction="#fonctionLien" prefHeight="36.0" prefWidth="227.0" ripplerFill="#2e362df5" text="Vente" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" viewOrder="2.0">
+                     <graphic>
+                        <ImageView fitHeight="32.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../AppData/Local/Temp/icons8_money_circulation_32px_2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <effect>
+                        <Bloom threshold="1.0">
+                           <input>
+                              <GaussianBlur />
+                           </input>
+                        </Bloom>
+                     </effect>
+                     <textFill>
+                        <LinearGradient endX="0.9968454740024891" endY="0.712933765976963" proportional="false" startX="1.0" startY="0.7917981373398838">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.626337468624115" green="0.6666666865348816" blue="0.6234567761421204" opacity="0.9599999785423279" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </JFXButton>
+                  <JFXButton fx:id="stock" alignment="BASELINE_LEFT" buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#fonctionLien" prefHeight="36.0" prefWidth="227.0" ripplerFill="#4c574bed" text="Stock" textAlignment="CENTER" viewOrder="2.0">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../AppData/Local/Temp/icons8_database_import_30px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.9968454740024891" endY="0.712933765976963" proportional="false" startX="1.0" startY="0.7917981373398838">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.39400583505630493" green="0.429824560880661" blue="0.40355750918388367" opacity="0.4300000071525574" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </JFXButton>
+                  <JFXButton fx:id="statistique" alignment="BASELINE_LEFT" buttonType="RAISED" layoutX="10.0" layoutY="90.0" onAction="#fonctionLien" prefHeight="36.0" prefWidth="227.0" ripplerFill="#4c574bed" text="Statistique" textAlignment="CENTER" viewOrder="2.0">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../AppData/Local/Temp/icons8_notre_dame_30px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.9968454740024891" endY="0.712933765976963" proportional="false" startX="1.0" startY="0.7917981373398838">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.39400583505630493" green="0.429824560880661" blue="0.40355750918388367" opacity="0.4300000071525574" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </JFXButton>
+                  <JFXButton fx:id="dashboard" alignment="BASELINE_LEFT" buttonType="RAISED" layoutX="10.0" layoutY="130.0" onAction="#fonctionLien" prefHeight="36.0" prefWidth="227.0" ripplerFill="#4c574bed" text="dashbord" textAlignment="CENTER" underline="true" viewOrder="2.0">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../AppData/Local/Temp/icons8_mother's_health_30px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.9968454740024891" endY="0.712933765976963" proportional="false" startX="1.0" startY="0.7917981373398838">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.39400583505630493" green="0.429824560880661" blue="0.40355750918388367" opacity="0.4300000071525574" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </JFXButton>
+                  <HBox prefHeight="71.0" prefWidth="185.0">
+                     <cursor>
+                        <Cursor fx:constant="OPEN_HAND" />
+                     </cursor>
+                  </HBox>
+                  <HBox alignment="BOTTOM_CENTER" layoutX="10.0" layoutY="250.0" prefHeight="104.0" prefWidth="191.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="126.0" prefWidth="59.0" text=" FLORENT " HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+               <effect>
+                  <Reflection fraction="0.0" topOpacity="0.0" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </VBox>
+            <VBox layoutX="163.0" layoutY="10.0" prefHeight="401.0" prefWidth="24.0" style="-fx-background-color: GRAY;" />
+         </children>
+         <effect>
+            <Glow level="0.0" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+   </left>
+   <top>
+      <VBox alignment="TOP_CENTER" prefHeight="125.0" prefWidth="883.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="15.0" prefWidth="600.0" style="-fx-background-color: GRAY;" />
+            <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="10.0" prefHeight="55.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="titre" alignment="CENTER" prefHeight="47.0" prefWidth="600.0" style="-fx-background-color: F5FFFF;" text="PHARMACIE DE MAKEPPE" textFill="#2eb519" underline="true">
+                     <font>
+                        <Font size="41.0" />
+                     </font>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../../AppData/Local/Temp/icons8_Plus_48px_2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <Glow level="0.72" />
+                     </effect>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="37.0" prefWidth="855.0" style="-fx-background-color: green;">
+               <children>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../AppData/Local/Temp/icons8_financial_dynamic_presentation_64px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <ImageView fitHeight="35.0" fitWidth="32.0">
+                     <image>
+                        <Image url="@../../../../AppData/Local/Temp/icons8_technical_support_48px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <ImageView fitHeight="37.0" fitWidth="23.0">
+                     <image>
+                        <Image url="@../../../../AppData/Local/Temp/icons8_archive_folder_80px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../AppData/Local/Temp/icons8_google_presentation_48px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <ImageView fitHeight="36.0" fitWidth="31.0">
+                     <image>
+                        <Image url="@../../../../AppData/Local/Temp/icons8_collaborator_female_80px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../AppData/Local/Temp/icons8_accounting_26px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <ImageView>
+                     <image>
+                        <Image url="@../../../../AppData/Local/Temp/icons8_archive_folder_32px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="0.0" text="." />
+               </children></HBox>
+            <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="84.0" minWidth="0.0" prefHeight="26.0" prefWidth="883.0" style="-fx-background-color: gray;" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <HBox prefHeight="15.0" prefWidth="600.0" style="-fx-background-color: GRAY;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="17.0" prefWidth="499.0" />
+         </children>
+      </HBox>
+   </bottom>
+   <cursor>
+      <Cursor fx:constant="OPEN_HAND" />
+   </cursor>
+   <effect>
+      <DropShadow height="28.015" radius="12.82875" spread="0.69" width="25.3" />
+   </effect>
+   <right>
+      <VBox prefHeight="415.0" prefWidth="15.0" style="-fx-background-color: GRAY;" BorderPane.alignment="CENTER" />
+   </right>
+</BorderPane>

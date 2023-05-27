@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane cache="true" cacheHint="SPEED" focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StockController">
+   <left>
+      <HBox maxWidth="300.0" minHeight="0.0" minWidth="0.0" prefHeight="401.0" prefWidth="217.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox prefHeight="337.0" prefWidth="10.0" style="-fx-background-color: #C6CCD2;">
+               <effect>
+                  <Lighting bumpInput="$null">
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </VBox>
+            <VBox maxWidth="200.0" minHeight="50.0" minWidth="50.0" prefHeight="401.0" prefWidth="186.0" style="-fx-background-color: FFFFFF;" HBox.hgrow="ALWAYS">
+               <children>
+                  <JFXButton fx:id="vente" alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#fonctionLien" prefHeight="36.0" prefWidth="227.0" ripplerFill="#2e362df5" text="Vente" textAlignment="CENTER" textFill="#220707" textOverrun="WORD_ELLIPSIS" viewOrder="2.0">
+                     <graphic>
+                        <ImageView fitHeight="63.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../AppData/Local/Temp/icons8_sell_stock_64px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Nirmala UI Semilight" size="22.0" />
+                     </font>
+                     <effect>
+                        <Bloom threshold="1.0">
+                           <input>
+                              <GaussianBlur />
+                           </input>
+                        </Bloom>
+                     </effect>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="stock" alignment="BASELINE_LEFT" buttonType="RAISED" defaultButton="true" onAction="#fonctionLien" prefHeight="36.0" prefWidth="227.0" ripplerFill="#4c574bed" text="Stock" textAlignment="CENTER" textFill="#220707" underline="true" viewOrder="2.0">
+                     <graphic>
+                        <ImageView fitHeight="60.0" fitWidth="56.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../AppData/Local/Temp/icons8_checklist_100px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Nirmala UI Semilight" size="22.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="statistique" alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#fonctionLien" prefHeight="36.0" prefWidth="227.0" text="Statistique" textAlignment="CENTER" textFill="#220707" viewOrder="2.0">
+                     <graphic>
+                        <ImageView fitHeight="54.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../AppData/Local/Temp/icons8_statistics_80px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Nirmala UI Semilight" size="22.0" />
+                     </font>
+                     <ripplerFill>
+                        <LinearGradient endX="0.9968454740024891" endY="0.712933765976963" proportional="false" startX="1.0" startY="0.7917981373398838">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.050032489001750946" green="0.05263157933950424" blue="0.05059562623500824" opacity="0.9300000071525574" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </ripplerFill>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="inventaire" alignment="BASELINE_LEFT" buttonType="RAISED" onAction="#fonctionLien" prefHeight="36.0" prefWidth="227.0" ripplerFill="#4c574bed" text="Inventaire" textAlignment="CENTER" textFill="#220707" viewOrder="2.0">
+                     <graphic>
+                        <ImageView fitHeight="53.0" fitWidth="55.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../AppData/Local/Temp/icons8_rear_window_defogger_100px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Nirmala UI Semilight" size="21.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="163.0" prefWidth="185.0" text=" FLORENT " />
+               </children>
+               <effect>
+                  <Reflection fraction="0.0" topOpacity="0.0" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </VBox>
+            <VBox layoutX="163.0" layoutY="10.0" prefHeight="401.0" prefWidth="24.0" style="-fx-background-color: #C6CCD2;" />
+         </children>
+         <effect>
+            <Glow level="0.0" />
+         </effect>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+   </left>
+   <top>
+      <VBox alignment="TOP_CENTER" prefHeight="125.0" prefWidth="883.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="15.0" prefWidth="600.0" style="-fx-background-color: #C6CCD2;" />
+            <HBox alignment="TOP_CENTER" prefHeight="55.0" prefWidth="600.0">
+               <children>
+                  <ImageView fitHeight="53.0" fitWidth="58.0">
+                     <image>
+                        <Image url="@../../../../../../../AppData/Local/Temp/icons8_meditation_50px.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="titre" alignment="CENTER" prefHeight="59.0" prefWidth="527.0" style="-fx-background-color: F5FFFF; -fx-background-color: 20;" text="gestpharma" textFill="#2eb519" underline="true">
+                     <font>
+                        <Font name="Eras Light ITC" size="41.0" />
+                     </font>
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../../AppData/Local/Temp/icons8_Plus_48px_2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <effect>
+                        <Glow level="0.72" />
+                     </effect>
+                  </Label>
+                  <ImageView fitHeight="57.0" fitWidth="74.0">
+                     <image>
+                        <Image url="@../../../../../../../AppData/Local/Temp/icons8_meditation_50px_1.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="37.0" prefWidth="855.0" style="-fx-background-color: #3DCC3D;">
+               <children>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="33.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../AppData/Local/Temp/icons8_financial_dynamic_presentation_64px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <ImageView fitHeight="35.0" fitWidth="32.0">
+                     <image>
+                        <Image url="@../../../../AppData/Local/Temp/icons8_technical_support_48px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <ImageView fitHeight="37.0" fitWidth="23.0">
+                     <image>
+                        <Image url="@../../../../AppData/Local/Temp/icons8_archive_folder_80px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../AppData/Local/Temp/icons8_google_presentation_48px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <ImageView fitHeight="36.0" fitWidth="31.0">
+                     <image>
+                        <Image url="@../../../../AppData/Local/Temp/icons8_collaborator_female_80px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../AppData/Local/Temp/icons8_accounting_26px.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <ImageView>
+                     <image>
+                        <Image url="@../../../../AppData/Local/Temp/icons8_archive_folder_32px.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="34.0" text=".">
+                     <graphic>
+                        <ImageView fitHeight="27.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton prefHeight="35.0" prefWidth="0.0" text="." />
+               </children></HBox>
+            <HBox alignment="TOP_CENTER" layoutX="10.0" layoutY="84.0" minWidth="0.0" prefHeight="26.0" prefWidth="883.0" style="-fx-background-color: gray;" VBox.vgrow="ALWAYS" />
+         </children>
+      </VBox>
+   </top>
+   <bottom>
+      <HBox prefHeight="15.0" prefWidth="600.0" style="-fx-background-color: GRAY;" BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="17.0" prefWidth="499.0" style="-fx-background-color: #C6CCD2;" />
+         </children>
+      </HBox>
+   </bottom>
+   <cursor>
+      <Cursor fx:constant="OPEN_HAND" />
+   </cursor>
+   <effect>
+      <DropShadow height="28.015" radius="12.82875" spread="0.69" width="25.3" />
+   </effect>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <TabPane tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab text="lot">
+                    <content>
+                        <AnchorPane>
+                           <children>
+                              <GridPane layoutX="60.0" layoutY="106.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="332.99999618530273" minHeight="10.0" percentHeight="73.0" prefHeight="332.99999618530273" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="188.33334350585938" minHeight="10.0" percentHeight="16.0" prefHeight="53.000003814697266" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <TableView fx:id="tableLot" editable="true" prefHeight="307.0" prefWidth="498.0" stylesheets="@../../application/application.css" tableMenuButtonVisible="true" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                      <columns>
+                                        <TableColumn fx:id="lotColumNum" prefWidth="75.0" text="NUMERO LOT" />
+                                        <TableColumn fx:id="lotColumProd" prefWidth="75.0" text="PRODUIT" />
+                                          <TableColumn fx:id="lotColumDosage" prefWidth="75.0" text="Dosage" />
+                                          <TableColumn fx:id="lotColumQte_stock" prefWidth="75.0" text="qte_stock" />
+                                          <TableColumn fx:id="lotColumPeremption" prefWidth="75.0" text="Date peremption" />
+                                          <TableColumn fx:id="lotColumQte_liv" prefWidth="75.0" text="qte_liv" />
+                                          <TableColumn fx:id="lotColumDate_liv" prefWidth="75.0" text="date_liv" />
+                                          <TableColumn fx:id="lotColumFourn" prefWidth="75.0" text="fournisseur" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                       <GridPane.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </GridPane.margin>
+                                    </TableView>
+                                    <FlowPane alignment="CENTER" columnHalignment="CENTER" hgap="10.0" vgap="10.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                                       <GridPane.margin>
+                                          <Insets left="20.0" right="20.0" top="20.0" />
+                                       </GridPane.margin>
+                                       <children>
+                                          <TextField fx:id="searchLot" promptText="numerolot" style="-fx-background-radius: 10px; -fx-background-color: #C6CCD2;" />
+                                          <HBox>
+                                             <children>
+                                                <TextField fx:id="searchDci_lot" promptText="dci" style="-fx-background-radius: 20px; -fx-background-color: #C6CCD2;" />
+                                             </children>
+                                          </HBox>
+                                          <TextField fx:id="searchFournisseur" layoutX="42.0" layoutY="20.0" promptText="fournisseur" style="-fx-background-radius: 10px; -fx-background-color: #C6CCD2;" />
+                                          <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="95.0" text="biento" />
+                                          <DatePicker fx:id="dateFiltre" prefHeight="25.0" prefWidth="122.0" />
+                                          <DatePicker fx:id="dateFiltre1" prefHeight="9.0" prefWidth="109.0" />
+                                          <CheckBox mnemonicParsing="false" text="trier" />
+                                       </children>
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                    </FlowPane>
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab text="Fournisseur">
+                     <content>
+                        <GridPane>
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="281.33331775665283" minWidth="10.0" percentWidth="65.0" prefWidth="281.33331775665283" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="501.33331394195557" minWidth="10.0" prefWidth="236.66668224334717" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="ALWAYS" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                 <children>
+                                    <GridPane alignment="CENTER_LEFT" hgap="10.0" maxHeight="10000.0" maxWidth="10000.0" prefHeight="50.0" prefWidth="50.0" vgap="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="0.0" percentHeight="50.0" prefHeight="4.0" vgrow="SOMETIMES" />
+                                          <RowConstraints minHeight="4.0" percentHeight="5.0" prefHeight="10.0" vgrow="NEVER" />
+                                          <RowConstraints minHeight="0.0" percentHeight="50.0" prefHeight="4.0" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <GridPane hgap="10.0" style="-fx-background-color: #C6CCD2; -fx-border-color: GREEN;" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="30.0" prefWidth="80.0" text="nom" GridPane.rowIndex="1" />
+                                                <TextField fx:id="update_fournisseur_nom" style="-fx-background-radius: 10px;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="11.0" layoutY="24.0" prefHeight="30.0" prefWidth="80.0" text="mail" GridPane.rowIndex="3" />
+                                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="11.0" layoutY="24.0" prefHeight="30.0" prefWidth="80.0" text="tell" GridPane.rowIndex="2" />
+                                                <TextField fx:id="update_fournisseur_tell" layoutX="91.0" layoutY="26.0" style="-fx-background-radius: 10px;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="update_fournisseur_mail" layoutX="91.0" layoutY="81.0" style="-fx-background-radius: 10px;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <Button fx:id="update_fournisseur_btn" mnemonicParsing="false" onAction="#update_fournisseur" style="-fx-background-radius: 10px;" text="modifier" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="11.0" layoutY="40.0" prefHeight="30.0" prefWidth="80.0" text="ID" />
+                                                <TextField fx:id="update_fournisseur_ID" layoutX="105.0" layoutY="42.0" style="-fx-background-radius: 10px;" GridPane.columnIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                             </children>
+                                          </GridPane>
+                                          <GridPane hgap="10.0" layoutX="10.0" layoutY="10.0" style="-fx-background-color: #C6CCD2; -fx-border-color: GREEN;" GridPane.rowIndex="2">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" prefWidth="100.0" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="30.0" prefWidth="80.0" text="nom" />
+                                                <TextField fx:id="ajouter_nom_fourn" style="-fx-background-radius: 10px;" GridPane.columnIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="11.0" layoutY="24.0" prefHeight="30.0" prefWidth="80.0" text="mail" GridPane.rowIndex="2" />
+                                                <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="11.0" layoutY="24.0" prefHeight="30.0" prefWidth="80.0" text="tell" GridPane.rowIndex="1" />
+                                                <TextField fx:id="ajouter_tell_fourn" layoutX="91.0" layoutY="26.0" style="-fx-background-radius: 10px;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <TextField fx:id="ajouter_mail_fourn" layoutX="91.0" layoutY="81.0" style="-fx-background-radius: 10px;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <GridPane.margin>
+                                                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                                   </GridPane.margin>
+                                                </TextField>
+                                                <Button fx:id="ajouter_fourn_btn" mnemonicParsing="false" onAction="#Ajouter_Fournisseur" style="-fx-background-radius: 10px;" text="Ajouter" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                             </children>
+                                          </GridPane>
+                                          <Label alignment="CENTER" maxWidth="800.0" prefHeight="17.0" prefWidth="185.0" style="-fx-border-color: green;" text="Ajouter  un fournisseur" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                             <GridPane.margin>
+                                                <Insets />
+                                             </GridPane.margin>
+                                          </Label>
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                              </AnchorPane>
+                              <Label alignment="CENTER" maxWidth="800.0" prefHeight="17.0" prefWidth="185.0" style="-fx-border-color: green;" text="Modifier un fournisseur" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Times New Roman" size="15.0" />
+                                 </font>
+                                 <GridPane.margin>
+                                    <Insets left="20.0" right="20.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TableView fx:id="table_fournisseur" editable="true" onMouseClicked="#tableMouseClicked" prefHeight="385.0" prefWidth="349.0" stylesheets="@../../application/application.css" tableMenuButtonVisible="true" GridPane.rowIndex="2">
+                                <columns>
+                                  <TableColumn fx:id="fourni_colum_id" prefWidth="75.0" text="id" />
+                                  <TableColumn fx:id="fourni_colum_nom" prefWidth="75.0" text="nom" />
+                                    <TableColumn fx:id="fourni_colum_tell" prefWidth="75.0" text="tell" />
+                                    <TableColumn fx:id="fourni_colum_mail" prefWidth="75.0" text="email" />
+                                </columns>
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+                                 <children>
+                                    <TextField fx:id="searchFourni" prefHeight="25.0" prefWidth="317.0">
+                                       <VBox.margin>
+                                          <Insets bottom="5.0" left="10.0" right="20.0" top="5.0" />
+                                       </VBox.margin>
+                                    </TextField>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </GridPane>
+                     </content>
+                  </Tab>
+                  <Tab closable="false" text="Produit">
+                     <content>
+                        <GridPane hgap="10.0" maxHeight="10000.0" prefHeight="479.0" prefWidth="517.0" vgap="10.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="ALWAYS" minWidth="10.0" percentWidth="80.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="2000.0" minHeight="5.0" percentHeight="10.0" prefHeight="52.333343505859375" vgrow="ALWAYS" />
+                              <RowConstraints maxHeight="2000.0" minHeight="10.0" percentHeight="10.0" prefHeight="14.666656494140625" vgrow="ALWAYS" />
+                              <RowConstraints maxHeight="350.333309173584" minHeight="10.0" percentHeight="90.0" prefHeight="316.33331298828125" vgrow="ALWAYS" />
+                           </rowConstraints>
+                           <children>
+                              <VBox GridPane.columnSpan="2">
+                                 <children>
+                                    <Accordion />
+                                    <FlowPane alignment="CENTER" columnHalignment="CENTER" style="-fx-background-color: #C6CCD2;" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <Button fx:id="update_medicament_btn" mnemonicParsing="false" onAction="#open_a_dialog" text="update">
+                                             <FlowPane.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </FlowPane.margin>
+                                             <graphic>
+                                                <ImageView fitHeight="19.0" fitWidth="19.0">
+                                                   <image>
+                                                      <Image url="@../../../../../../../AppData/Local/Temp/icons8_update_left_rotation_24px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="create_medicament_btn" layoutX="10.0" layoutY="17.0" mnemonicParsing="false" onAction="#open_a_dialog" prefHeight="25.0" prefWidth="67.0" text="create">
+                                             <FlowPane.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </FlowPane.margin>
+                                             <graphic>
+                                                <ImageView fitHeight="16.0" fitWidth="14.0">
+                                                   <image>
+                                                      <Image url="@../../../../../../../AppData/Local/Temp/icons8_joyent_50px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="delete_medicament_btn" layoutX="62.0" layoutY="17.0" mnemonicParsing="false" onAction="#open_a_dialog" text="delete">
+                                             <FlowPane.margin>
+                                                <Insets left="10.0" right="10.0" />
+                                             </FlowPane.margin>
+                                             <graphic>
+                                                <ImageView fitHeight="19.0" fitWidth="13.0">
+                                                   <image>
+                                                      <Image url="@../../../../../../../AppData/Local/Temp/icons8_delete_database_30px.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="rav_medicament_btn" layoutX="243.0" layoutY="21.0" mnemonicParsing="false" onAction="#open_a_dialog" text="Ravitaller" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </FlowPane>
+                                 </children>
+                              </VBox>
+                              <AnchorPane maxHeight="1000.0" prefHeight="416.0" prefWidth="497.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" GridPane.vgrow="ALWAYS">
+                                 <GridPane.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </GridPane.margin>
+                                 <children>
+                                    <TableView fx:id="table_medi" editable="true" layoutX="102.0" layoutY="52.0" maxHeight="1000.0" onMouseClicked="#showDetail" prefHeight="200.0" prefWidth="337.0" stylesheets="@../../application/application.css" tableMenuButtonVisible="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="medi_colum_dci" prefWidth="75.0" text="DCI" />
+                                        <TableColumn fx:id="medi_colum_prix_vente" prefWidth="75.0" text="prix_vente" />
+                                          <TableColumn fx:id="Medi_colum_forme" prefWidth="75.0" text="forme" />
+                                          <TableColumn fx:id="medi_colum_dosage" prefWidth="75.0" text="dosage" />
+                                          <TableColumn fx:id="medi_colum_qte_soct" prefWidth="75.0" text="qte_stock" />
+                                          <TableColumn fx:id="medi_colum_qte_seuil" prefWidth="75.0" text="qte_seuil" />
+                                          <TableColumn fx:id="medi_colum_groupe" prefWidth="75.0" text="groupe" />
+                                      </columns>
+                                       <columnResizePolicy>
+                                          <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                       </columnResizePolicy>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <HBox alignment="CENTER" prefHeight="31.0" prefWidth="517.0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="37.0" prefWidth="240.0" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                       <children>
+                                          <VBox>
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="186.0" text="DCI" />
+                                                <TextField fx:id="rechercheProduit" maxWidth="300.0" style="-fx-background-radius: 10px; -fx-background-color: #C6CCD2;" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="10.0" layoutY="10.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="186.0" text="Groupe" />
+                                                <TextField fx:id="groupeProduit" maxWidth="300.0" style="-fx-background-radius: 10px; -fx-background-color: #C6CCD2;" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="235.0" layoutY="10.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="17.0" prefWidth="186.0" text="forme" />
+                                                <TextField fx:id="formeProduit" maxWidth="300.0" style="-fx-background-radius: 10px; -fx-background-color: #C6CCD2;" />
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="355.0" layoutY="10.0">
+                                             <children>
+                                                <JFXCheckBox alignment="CENTER" contentDisplay="CENTER" />
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </GridPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </GridPane>
+   </center>
+   <right>
+      <VBox alignment="TOP_RIGHT" prefHeight="401.0" prefWidth="24.0" style="-fx-background-color: #C6CCD2;" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="15.0" />
+         </BorderPane.margin></VBox>
+   </right>
+</BorderPane>

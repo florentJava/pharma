@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane prefHeight="502.0" prefWidth="493.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RavStockController">
+   <content>
+      <FlowPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="422.0" prefWidth="493.0">
+         <children>
+            <GridPane alignment="CENTER" focusTraversable="true" prefHeight="346.0" prefWidth="437.0" style="-fx-background-color: gray;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.3333740234375" minWidth="10.0" prefWidth="182.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="194.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="1.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="1.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="70.0" minHeight="1.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="1.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="1.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="1.0" prefHeight="14.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label contentDisplay="CENTER" prefHeight="17.0" prefWidth="245.0" text="DCI :" GridPane.rowIndex="1" />
+                  <Label contentDisplay="CENTER" layoutX="10.0" layoutY="25.0" prefHeight="17.0" prefWidth="245.0" text="Dosage" GridPane.rowIndex="2" />
+                  <TextField fx:id="dci" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="dosage" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label contentDisplay="CENTER" layoutX="10.0" layoutY="104.0" prefHeight="17.0" prefWidth="245.0" text="Date de peremption" GridPane.rowIndex="5" />
+                  <Label contentDisplay="CENTER" layoutX="10.0" layoutY="104.0" prefHeight="17.0" prefWidth="245.0" text="quantite" GridPane.rowIndex="4" />
+                  <TextField fx:id="qte" layoutX="198.0" layoutY="100.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label contentDisplay="CENTER" layoutX="10.0" layoutY="230.0" prefHeight="17.0" prefWidth="245.0" text="Fournisseur" GridPane.rowIndex="7" />
+                  <TextField fx:id="fournisseur" layoutX="198.0" layoutY="226.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <Label alignment="TOP_CENTER" prefHeight="34.0" prefWidth="378.0" text="Donnees medicaments" textFill="#3cd41a" underline="true" GridPane.columnSpan="2">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" layoutX="39.0" layoutY="18.0" prefHeight="34.0" prefWidth="378.0" text="nouveau lot" textFill="#3cd41a" underline="true" GridPane.columnSpan="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="date" prefHeight="25.0" prefWidth="205.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label contentDisplay="CENTER" layoutX="39.0" layoutY="249.0" prefHeight="17.0" prefWidth="245.0" text="Prix achat" GridPane.rowIndex="6" />
+                  <TextField fx:id="prix_achat" layoutX="224.0" layoutY="215.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+               </children>
+               <FlowPane.margin>
+                  <Insets />
+               </FlowPane.margin>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </GridPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </FlowPane>
+   </content>
+   <header>
+      <Label alignment="CENTER" prefHeight="61.0" prefWidth="493.0" style="-fx-background-color: gray;" text="Ravitaller Medicament:" textFill="#14e436" underline="true">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+   </header>
+   <buttonTypes>
+      <ButtonType fx:constant="OK" />
+      <ButtonType fx:constant="CANCEL" />
+   </buttonTypes>
+</DialogPane>

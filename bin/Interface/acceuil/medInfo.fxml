@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+
+
+<DialogPane prefHeight="367.0" prefWidth="376.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MedInfoController">
+   <header>
+      <FlowPane alignment="CENTER" columnHalignment="CENTER">
+         <children>
+            <ImageView fx:id="image" fitHeight="153.0" fitWidth="234.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../AppData/Local/Temp/icons8_pills_80px.png" />
+               </image>
+            </ImageView>
+         </children>
+      </FlowPane>
+   </header>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <content>
+      <AnchorPane prefHeight="67.0" prefWidth="311.0">
+         <children>
+            <Label fx:id="description" alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="63.0" prefHeight="122.0" prefWidth="369.0" />
+            <Label layoutX="103.0" layoutY="23.0" prefHeight="17.0" prefWidth="172.0" text="Description sur le medicament" underline="true" />
+         </children>
+      </AnchorPane>
+   </content>
+   <buttonTypes>
+      <ButtonType fx:constant="OK" />
+   </buttonTypes>
+</DialogPane>

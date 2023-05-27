@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane prefHeight="567.0" prefWidth="493.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateMedicamentController">
+   <content>
+      <FlowPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="493.0">
+         <children>
+            <GridPane alignment="CENTER" prefHeight="395.0" prefWidth="437.0" style="-fx-background-color: #C6CCD2;">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="183.3333740234375" minWidth="10.0" prefWidth="182.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="194.0" minWidth="10.0" prefWidth="194.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="30.0" minHeight="1.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="1.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="1.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="1.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="1.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="1.0" prefHeight="14.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="100.0" minHeight="1.0" prefHeight="50.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label contentDisplay="CENTER" prefHeight="17.0" prefWidth="245.0" text="DCI:" />
+                  <Label contentDisplay="CENTER" layoutX="10.0" layoutY="25.0" prefHeight="17.0" prefWidth="245.0" text="Dosage" GridPane.rowIndex="1" />
+                  <TextField fx:id="dci" GridPane.columnIndex="1" />
+                  <TextField fx:id="dosage" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label contentDisplay="CENTER" layoutX="10.0" layoutY="104.0" prefHeight="17.0" prefWidth="245.0" text="groupe" GridPane.rowIndex="4" />
+                  <Label contentDisplay="CENTER" layoutX="10.0" layoutY="104.0" prefHeight="17.0" prefWidth="245.0" text="quantite seuil" GridPane.rowIndex="3" />
+                  <Label contentDisplay="CENTER" layoutX="10.0" layoutY="104.0" prefHeight="17.0" prefWidth="245.0" text="prix vente" GridPane.rowIndex="2" />
+                  <TextField fx:id="groupe" layoutX="198.0" layoutY="100.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <TextField fx:id="qte_seuil" layoutX="198.0" layoutY="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="prix_vente" layoutX="198.0" layoutY="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label contentDisplay="CENTER" layoutX="10.0" layoutY="230.0" prefHeight="17.0" prefWidth="245.0" text="image" GridPane.rowIndex="5" />
+                  <TextField fx:id="image" layoutX="198.0" layoutY="226.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label contentDisplay="CENTER" layoutX="10.0" layoutY="239.0" prefHeight="17.0" prefWidth="245.0" text="libelle" GridPane.rowIndex="6" />
+                  <TextArea fx:id="libelle" prefHeight="174.0" prefWidth="194.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+               </children>
+               <FlowPane.margin>
+                  <Insets />
+               </FlowPane.margin>
+               <padding>
+                  <Insets left="10.0" right="10.0" />
+               </padding>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </GridPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </FlowPane>
+   </content>
+   <header>
+      <Label alignment="CENTER" style="-fx-background-color: #C6CCD2;" text="Nouveau Medicament:" textFill="#00f77a" underline="true">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Label>
+   </header>
+   <buttonTypes>
+      <ButtonType fx:constant="OK" />
+      <ButtonType fx:constant="CANCEL" />
+   </buttonTypes>
+</DialogPane>

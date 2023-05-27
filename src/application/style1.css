@@ -1,0 +1,58 @@
+* {
+	fx-grey-color: black;
+	-fx-light-grey-color: gray;
+	-fx-lightest-grey-color: #F9F9FB;
+    
+	-fx-focus-color: -fx-secondary-color;
+}
+
+.table-view {
+	-fx-border-color: gray;
+}
+
+
+.table-view .column-header {
+	-fx-background-color: green;
+	-fx-border-color: black;
+}
+.table-view .column-header .label{
+	-fx-font-weight: bold; 
+	-fx-alignment: center-left;
+}
+/* This is just magic */
+.table-row-cell:filled {
+	-fx-background-color: gray;
+	-fx-border-color: black;
+	-fx-border-insets: 0, 1;
+}
+.table-row-cell:empty {
+	-fx-background-color: transparent;
+}
+.table-row-cell:filled:hover {
+	-fx-background-color: green;
+}
+.table-row-cell:filled:selected:hover {
+	-fx-background-color: green;
+}
+.table-row-cell:filled:selected {
+  	-fx-background-color: transparent;
+ 	-fx-background-insets: 0.0;
+	-fx-background-radius: 0.0;
+}
+.table-row-cell:filled:selected .table-cell {
+	-fx-text-fill: black;
+}
+.table-view .cell:filled{
+	-fx-cell-size: 30;
+	-fx-alignment: center-left;
+}
+.check-box-table-cell > .check-box:selected .box .mark {
+	-fx-background-color: white;
+}
+.check-box-table-cell > .check-box:selected .box{
+	-fx-background-color: -fx-accent-color;
+}
+.table-view .placeholder .label {
+	-fx-text-fill: red;
+	-fx-padding:20px;
+}

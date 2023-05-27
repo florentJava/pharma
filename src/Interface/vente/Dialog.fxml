@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<DialogPane contentText="nn" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="480.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DialogController">
+    <header>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="93.0" prefWidth="480.0">
+         <children>
+            <FlowPane alignment="BASELINE_CENTER" prefHeight="111.0" prefWidth="480.0" AnchorPane.bottomAnchor="89.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <ImageView fx:id="imageMedicament" fitHeight="92.0" fitWidth="194.0" layoutX="14.0" layoutY="4.0">
+               <image>
+                  <Image url="@../../../../../../../AppData/Local/Temp/icons8_medical_bag_50px.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="nomMed" alignment="CENTER" contentDisplay="CENTER" layoutX="237.0" layoutY="8.0" prefHeight="75.0" prefWidth="229.0" text="nom medicament" underline="true">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="dosageId" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="41.0" prefHeight="75.0" prefWidth="229.0" text="dosage" underline="true">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    </header>
+    <content>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="138.0" prefWidth="480.0" style="-fx-background-color: gra\y;">
+         <children>
+            <GridPane layoutX="80.0" layoutY="31.0" prefHeight="118.0" prefWidth="305.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="17.0" prefWidth="149.0" text="quantite" />
+                  <TextField fx:id="nbre" GridPane.columnIndex="1" />
+                  <Label layoutX="10.0" layoutY="41.0" prefHeight="17.0" prefWidth="149.0" text="numero de lot" GridPane.rowIndex="1" />
+                  <HBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <TextField fx:id="code_lot" prefHeight="25.0" prefWidth="126.0" />
+                        <ComboBox fx:id="combo" onAction="#envoie" prefHeight="25.0" prefWidth="16.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </children></AnchorPane>
+    </content>
+    <expandableContent>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
+    </expandableContent>
+   <buttonTypes>
+      <ButtonType fx:constant="OK" />
+      <ButtonType fx:constant="CANCEL" />
+   </buttonTypes>
+</DialogPane>

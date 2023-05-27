@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane opacity="0.66" prefHeight="330.0" prefWidth="357.0" style="-fx-background-color: #C6CCD2;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ConnexionController">
+   <children>
+      <JFXButton fx:id="submit" layoutX="145.0" layoutY="254.0" onAction="#goAway" prefHeight="43.0" prefWidth="51.0" style="-fx-background-color: #76ff03;" text="." textFill="WHITE">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="34.0" fitWidth="41.0">
+               <image>
+                  <Image url="@../../../../../../../AppData/Local/Temp/icons8_next_80px.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <HBox layoutX="40.0" layoutY="94.0" style="-fx-background-color: gray; -fx-background-radius: 50px;">
+         <children>
+            <ImageView fitHeight="37.0" fitWidth="41.0">
+               <image>
+                  <Image url="@../../../../../../../AppData/Local/Temp/icons8_user_24px.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="3.0" />
+            <TextField fx:id="userName" alignment="CENTER" opacity="0.47" prefHeight="25.0" prefWidth="209.0" promptText="username" style="-fx-background-color: gray; -fx-background-radius: 50px;">
+               <padding>
+                  <Insets bottom="5.0" left="20.0" right="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="40.0" layoutY="153.0" style="-fx-background-color: gray; -fx-background-radius: 50px;">
+         <children>
+            <ImageView fitHeight="37.0" fitWidth="33.0">
+               <image>
+                  <Image url="@../../../../../../../AppData/Local/Temp/icons8_lock_80px.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="3.0" />
+            <PasswordField fx:id="password" alignment="CENTER" prefHeight="25.0" prefWidth="209.0" promptText="password" style="-fx-background-color: gray; -fx-background-radius: 50px;">
+               <font>
+                  <Font size="19.0" />
+               </font></PasswordField>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
